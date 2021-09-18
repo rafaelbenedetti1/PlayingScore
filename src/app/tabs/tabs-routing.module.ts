@@ -24,6 +24,14 @@ const routes: Routes = [
         loadChildren: () => import('../marcador/marcador.module').then(m => m.MarcadorPageModule)
       },
       {
+        path: 'tabJogos/tabJogosFavoritos',
+        loadChildren: () => import('../jogos-favoritos/jogos-favoritos.module').then(m => m.JogosFavoritosPageModule)
+      },
+      {
+        path: 'tabJogos/tabJogosAmigos',
+        loadChildren: () => import('../jogos-amigos/jogos-amigos.module').then(m => m.JogosAmigosPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tabJogos',
         pathMatch: 'full'
