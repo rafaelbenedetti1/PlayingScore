@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs"></ion-back-button>
+      <ion-title>FIFA20</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item color="light">
+    <ion-label position="floating">Número de Jogadores</ion-label>
+    <ion-input type="number" (ionInput)="updateTotalPlayers($event.target.value)" value="{{QtdJogadores}}"></ion-input>
+  </ion-item>
+  
+  <ion-card>
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <ion-text color="dark"><h3>{{Jogador[0]}}</h3></ion-text>
+      </ion-label>
+    </ion-item>
+
+    <ion-card-content class="contadores">
+      <ion-icon size="large" color="danger" name="remove-circle" (click)="decrement(0)" class="btn_menos"></ion-icon>
+      <ion-label class="ion-text-wrap">
+        <ion-text color="dark"><h2>{{Score[0]}}</h2></ion-text>
+      </ion-label>
+      <ion-icon size="large" color="success" name="add-circle" (click)="increment(0)" class="btn_mais"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label class="ion-text-wrap">
+        <ion-text color="dark"><h3>{{Jogador[1]}}</h3></ion-text>
+      </ion-label>
+    </ion-item>
+
+    <ion-card-content class="contadores">
+      <ion-icon size="large" color="danger" name="remove-circle" (click)="decrement(1)" class="btn_menos"></ion-icon>
+      <ion-label class="ion-text-wrap">
+        <ion-text color="dark"><h2>{{Score[1]}}</h2></ion-text>
+      </ion-label>
+      <ion-icon size="large" color="success" name="add-circle" (click)="increment(1)" class="btn_mais"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

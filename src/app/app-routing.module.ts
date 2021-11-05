@@ -21,7 +21,11 @@ const routes: Routes = [
   {
     path: 'marcador',
     loadChildren: () => import('./marcador/marcador.module').then( m => m.MarcadorPageModule)
+  },  {
+    path: 'jogar',
+    loadChildren: () => import('./jogar/jogar.module').then( m => m.JogarPageModule)
   },
+
   
 ];
 @NgModule({
